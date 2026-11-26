@@ -117,6 +117,13 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:14.5px;col
 .foot nav{display:flex;flex-wrap:wrap;gap:22px}
 .foot a{text-decoration:none}.foot a:hover{color:var(--ink)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,summary::after{transition:none}}
+/* KI-Kennzeichnung: einheitlich für alle KI-Bilder (siehe QUALITAET_WORKFLOW) */
+.ai{position:absolute;z-index:2;display:inline-flex;align-items:center;gap:6px;padding:5px 10px 5px 8px;border-radius:999px;background:rgba(244,242,238,.78);color:#3b3a36;font:500 12.5px/1 "Schibsted Grotesk",system-ui,sans-serif;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);pointer-events:none}
+.ai svg{width:12px;height:12px;flex:none}
+.ai.br{right:14px;bottom:14px}
+.shot{position:relative}
+.ai.br.hero-ai{right:18px;bottom:18px}
+@media(max-width:700px){.ai.br.hero-ai{top:14px;bottom:auto;right:14px}}
 </style>
 </head>
 <body>
@@ -137,6 +144,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:14.5px;col
 <main id="top">
   <section class="hero" aria-label="Einleitung">
     <img src="img/raum.jpg" alt="Eichenbrett mit Pflanze, Büchern und Tasse auf einem weißen Heizkörper, gehalten von zwei weißen Halterungen" fetchpriority="high">
+    <span class="ai br hero-ai" role="note"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="#9a6a33" d="M6 0c.4 2.9 2.1 4.6 6 6-3.9 1.4-5.6 3.1-6 6-.4-2.9-2.1-4.6-6-6 3.9-1.4 5.6-3.1 6-6z"/></svg>KI-Visualisierung</span>
     <div class="wrap">
       <h1>Das Regal, das schon an der Wand hängt.</h1>
       <p>Zwei kleine Halter machen aus deinem Heizkörper eine Ablage. Ohne Bohren, ohne Werkzeug, beim Auszug spurlos wieder weg.</p>
@@ -151,8 +159,8 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:14.5px;col
   <section class="band" id="produkt">
     <div class="wrap prod">
       <div>
-        <div class="shot"><img src="img/studio.jpg" alt="Zwei Regalhalter, einer weiß, einer anthrazit, neben einem Stück Eichenholz" loading="lazy"></div>
-        <p class="small caption">Abbildungen sind Visualisierungen unseres Designs. Fotos der gedruckten Teile folgen.</p>
+        <div class="shot"><img src="img/studio.jpg" alt="Zwei Regalhalter, einer weiß, einer anthrazit, neben einem Stück Eichenholz" loading="lazy"><span class="ai br" role="note"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="#9a6a33" d="M6 0c.4 2.9 2.1 4.6 6 6-3.9 1.4-5.6 3.1-6 6-.4-2.9-2.1-4.6-6-6 3.9-1.4 5.6-3.1 6-6z"/></svg>KI-Visualisierung</span></div>
+        <p class="small caption">Mit KI erstellte Visualisierungen unseres Designs, nicht maßstabsgetreu. Fotos der gedruckten Teile folgen.</p>
       </div>
       <div class="buy">
         <p class="small">Heizkörper-Regalhalter · ASA</p>
